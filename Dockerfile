@@ -30,6 +30,8 @@ ENV AIRFLOW_HOME ~/airflow
 
 COPY . /root/airflow
 
+COPY ./supervisord.conf /etc/supervisor
+
 COPY ./airflow.conf /etc/supervisor/conf.d
 
 RUN pip install airflow -i https://mirrors.aliyun.com/pypi/simple
