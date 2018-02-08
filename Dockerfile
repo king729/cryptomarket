@@ -22,11 +22,9 @@ RUN pip install asyncio
 
 RUN pip install ccxt
 
-RUN mkdir ~/airflow
-
 ENV AIRFLOW_HOME ~/airflow
 
-RUN COPY . /root/airflow
+COPY . /root/airflow
 
 RUN pip install airflow -i https://mirrors.aliyun.com/pypi/simple
 
