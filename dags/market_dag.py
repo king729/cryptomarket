@@ -12,7 +12,7 @@ default_args = {
 
 dag = DAG('miniute_process', default_args=default_args, schedule_interval=timedelta(minutes=1))
 
-templated_command = 'python ../project/cryptomarket.py'
+templated_command = 'python /root/airflow/project/cryptomarket.py'
 
 
 task = BashOperator(
