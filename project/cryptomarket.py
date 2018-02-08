@@ -15,3 +15,5 @@ print(asyncio.get_event_loop().run_until_complete(okcoin.fetch_ticker('BTC/USD')
 print("-------------")
 
 print(asyncio.get_event_loop().run_until_complete(okcoin.fetch_open_orders('BTC/USD')))
+
+print(asyncio.get_event_loop().run_until_complete(okcoin.fetch_closed_orders('BTC/USD')))
