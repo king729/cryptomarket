@@ -12,8 +12,7 @@ default_args = {
 
 dag = DAG('miniute_process', default_args=default_args, schedule_interval=timedelta(minutes=1))
 
-templated_command = "python cryptomarket.py"\
-    + " --start_date {{ ds }}"
+templated_command = "python cryptomarket.py"
 
 
 task = BashOperator(
