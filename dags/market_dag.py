@@ -1,7 +1,6 @@
 from airflow import DAG
 from airflow.operators import BashOperator
 from datetime import datetime, timedelta
-import ConfigParser
 
 default_args = {
     'owner': 'king',
