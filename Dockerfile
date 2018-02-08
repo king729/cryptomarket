@@ -20,13 +20,15 @@ RUN pip install pyjwt
 
 RUN pip install asyncio
 
+RUN pip install ccxt
+
 RUN mkdir ~/airflow
 
 ENV AIRFLOW_HOME ~/airflow
 
 RUN COPY . /root/airflow
 
-RUN pip install airflow
+RUN pip install airflow -i https://mirrors.aliyun.com/pypi/simple
 
 RUN airflow initdb
 
