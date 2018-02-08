@@ -22,12 +22,18 @@ RUN pip install asyncio
 
 RUN pip install ccxt
 
+Run apt-get update
+
+Run apt-get install supervisor
+
 ENV AIRFLOW_HOME ~/airflow
 
 COPY . /root/airflow
+
+COPY ./airflow.conf /etc/supervisor/conf.d
 
 RUN pip install airflow -i https://mirrors.aliyun.com/pypi/simple
 
 RUN airflow initdb
 
-CMD [ "airflow", "webserver", "-p", "8080" ]
+CMD [ "supervisord", "-c", "/etc/supervisor/supervisord.conf" ]
