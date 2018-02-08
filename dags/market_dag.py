@@ -10,7 +10,7 @@ default_args = {
     'retry_delay': timedelta(minutes=15),
 }
 
-dag = DAG('miniute_process', default_args=default_args, schedule_interval=timedelta(minutes=1))
+dag = DAG('miniute_process', default_args=default_args, schedule_interval=timedelta(seconds=5))
 
 templated_command = 'python /root/airflow/project/cryptomarket.py'
 
