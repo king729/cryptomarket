@@ -23,7 +23,7 @@ RUN pip install asyncio
 
 ENV AIRFLOW_HOME ~/airflow
 
-RUN COPY . /root/airflow
+COPY . /root/airflow
 
 RUN pip install airflow
 
