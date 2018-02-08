@@ -24,7 +24,7 @@ RUN pip install ccxt
 
 Run apt-get update
 
-Run apt-get install supervisor
+Run apt-get install -y  supervisor
 
 ENV AIRFLOW_HOME ~/airflow
 
