@@ -18,6 +18,8 @@ RUN pip install cryptography
 
 RUN pip install pyjwt
 
+RUN pip install asyncio
+
 ENV AIRFLOW_HOME ~/airflow
 
 RUN pip install airflow
