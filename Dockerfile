@@ -20,7 +20,6 @@ RUN pip install pyjwt
 
 RUN pip install asyncio
 
-RUN mkdir ~/airflow
 
 ENV AIRFLOW_HOME ~/airflow
 
